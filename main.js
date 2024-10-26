@@ -18,11 +18,11 @@ quantityInput.addEventListener("input", updatePrice); // update price according 
 
 //add event listener to pruchase button
 placeOrderButton.addEventListener("click", () => {
-const selectedProduct= productSelector.options[productSelector.selectedIndex].text; //get the name of the chosen product
+const selectedProduct = productSelector.options[productSelector.selectedIndex].text.split(' - ')[0]; // get only the name of the chosen product
 const quantity = quantityInput.value;  // quantity
 const totalPrice = totalPriceElement.textContent;  // Get the current total price
 
-orderSummary.textContent = `Congratulations on your order! You ordered ${quantity} of ${selectedProduct} for a total of ${totalPrice}`
+orderSummary.textContent = `Congratulations on your order! You ordered ${quantity} of ${selectedProduct} for a total of $${totalPrice}`
 alert (`Thank you for your purchase!`)
 
 })
