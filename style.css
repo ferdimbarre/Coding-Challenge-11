@@ -1,10 +1,14 @@
 
-#electronics-deparment{
+h2{
     color: purple;
-    font-style: bold;
+    font-weight: bold;
     }
     #quantity{
-        font-size: 20 px;
-        background-color: rgb(216, 91, 91)
+        font-size: 20px;
+        background-color: rgb(93, 93, 233);
     }
-    
+    #total-price{
+        font-style: italic;
+
+
+    }
