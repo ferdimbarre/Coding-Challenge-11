@@ -12,11 +12,20 @@ function updatePrice () {
     totalPriceElement.textContent = `${totalPrice}` //updates total price according to qtd and product
 
 }
-// add event listeners 
+// add event listeners to update price
 productSelector.addEventListener("change", updatePrice); // update price according to product
 quantityInput.addEventListener("input", updatePrice); // update price according to quantity
 
+//add event listener to pruchase button
+placeOrderButton.addEventListener("click", () => {
+const selectedProduct= productSelector.options[productSelector.selectedIndex].text; //get the name of the chosen product
+const quantity = quantityInput.value;  // quantity
+const totalPrice = totalPriceElement.textContent;  // Get the current total price
 
+orderSummary.textContent = `Congratulations on your order! You ordered ${quantity} or ${selectedProduct} for a total of ${totalPrice}`
+alert (`Thank you for your purchase!`)
+
+})
 
 
 
