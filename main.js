@@ -22,7 +22,7 @@ const selectedProduct= productSelector.options[productSelector.selectedIndex].te
 const quantity = quantityInput.value;  // quantity
 const totalPrice = totalPriceElement.textContent;  // Get the current total price
 
-orderSummary.textContent = `Congratulations on your order! You ordered ${quantity} or ${selectedProduct} for a total of ${totalPrice}`
+orderSummary.textContent = `Congratulations on your order! You ordered ${quantity} of ${selectedProduct} for a total of ${totalPrice}`
 alert (`Thank you for your purchase!`)
 
 })
